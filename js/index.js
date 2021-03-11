@@ -112,3 +112,15 @@ let botTextContent3Par = botTextContent3.querySelector('p');
 
 botTextContent3Header.textContent = siteContent['main-content']['vision-h4'];
 botTextContent3Par.textContent = siteContent['main-content']['vision-content'];
+
+// contact section
+
+let contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent['contact']['contact-h4'];
+
+let contactInfo = document.querySelectorAll('.contact p');
+contactInfo[0].textContent = siteContent['contact']['address'];
+contactInfo[1].textContent = siteContent['contact']['phone'];
+contactInfo[2].textContent = siteContent['contact']['email'];
+
+//footer section
