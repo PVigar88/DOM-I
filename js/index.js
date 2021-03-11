@@ -87,3 +87,28 @@ topTextContent2Par.textContent = siteContent['main-content']['about-content'];
 
 let middleImg = document.querySelector('.middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+//bottom content
+
+let botTextContent = document.querySelectorAll('.bottom-content .text-content');
+let botTextContent1 = botTextContent[0];
+let botTextContent2 = botTextContent[1];
+let botTextContent3 = botTextContent[2];
+
+let botTextContent1Header = botTextContent1.querySelector('h4');
+let botTextContent1Par = botTextContent1.querySelector('p');
+
+botTextContent1Header.textContent = siteContent['main-content']['services-h4'];
+botTextContent1Par.textContent = siteContent['main-content']['services-content'];
+
+let botTextContent2Header = botTextContent2.querySelector('h4');
+let botTextContent2Par = botTextContent2.querySelector('p');
+
+botTextContent2Header.textContent = siteContent['main-content']['product-h4'];
+botTextContent2Par.textContent = siteContent['main-content']['product-content'];
+
+let botTextContent3Header = botTextContent3.querySelector('h4');
+let botTextContent3Par = botTextContent3.querySelector('p');
+
+botTextContent3Header.textContent = siteContent['main-content']['vision-h4'];
+botTextContent3Par.textContent = siteContent['main-content']['vision-content'];
