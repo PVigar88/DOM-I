@@ -141,7 +141,25 @@ homeLink.href = '#';
 homeLink.textContent = 'Home';
 document.querySelector('nav').prepend(homeLink);
 
-let careersLink = document.createElement('a');
-careersLink.href = '#';
-careersLink.textContent = 'Careers';
-document.querySelector('nav').appendChild(careersLink);
+let darkmodeLink = document.createElement('a');
+darkmodeLink.href = '#';
+darkmodeLink.textContent = 'DarkMode';
+document.querySelector('nav').appendChild(darkmodeLink);
+
+// Stretch
+
+ctaButton.style.backgroundColor = 'yellow';
+
+homeLink.style.color = 'red';
+homeLink.style.fontWeight = 'bold';
+
+
+darkmodeLink.onclick = () => {
+  if (darkmodeLink.textContent == "LightMode") {
+    document.querySelector('body').style.backgroundColor = "white";
+    darkmodeLink.textContent = "DarkMode"
+  }
+  else {
+    document.querySelector('body').style.backgroundColor = "#4f555e";
+    darkmodeLink.textContent = "LightMode"
+}};
