@@ -66,7 +66,7 @@ let ctaImg = document.querySelector("#cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 // main content section
 
-//top content
+//--top content
 let topTextContent = document.querySelectorAll('.top-content .text-content');
 let topTextContent1 = topTextContent[0];
 let topTextContent2 = topTextContent[1];
@@ -83,12 +83,12 @@ let topTextContent2Par = topTextContent2.querySelector('p');
 topTextContent2Header.textContent = siteContent['main-content']['about-h4'];
 topTextContent2Par.textContent = siteContent['main-content']['about-content'];
 
-// spanned image
+//--middle image
 
 let middleImg = document.querySelector('.middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
-//bottom content
+//--bottom content
 
 let botTextContent = document.querySelectorAll('.bottom-content .text-content');
 let botTextContent1 = botTextContent[0];
@@ -124,3 +124,24 @@ contactInfo[1].textContent = siteContent['contact']['phone'];
 contactInfo[2].textContent = siteContent['contact']['email'];
 
 //footer section
+
+let footerContent = document.querySelector('footer p');
+footerContent.textContent = siteContent['footer']['copyright'];
+
+//Add New Content
+//--change nav text color to green
+
+let navAnchors = document.querySelectorAll('nav a');
+navAnchors.forEach(anchor => anchor.style.color = 'green');
+
+//--add new items to the nav with .appendChild and .prepend
+
+let homeLink = document.createElement('a');
+homeLink.href = '#';
+homeLink.textContent = 'Home';
+document.querySelector('nav').prepend(homeLink);
+
+let careersLink = document.createElement('a');
+careersLink.href = '#';
+careersLink.textContent = 'Careers';
+document.querySelector('nav').appendChild(careersLink);
